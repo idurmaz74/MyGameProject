@@ -11,7 +11,7 @@ namespace GameProject.Adapters
         
         public bool CheckIfRealPerson(Customer customer)
         {
-            if (customer.TcNo=="22222222222" && customer.FirstName=="Kübra" && customer.LastName=="Kılıç" && customer.BirtOfYear==1997 )
+            if (customer.TcNo=="12345678901" && customer.FirstName=="Bulut" && customer.LastName=="Çalışkan" && customer.BirthOfYear==2007 )
             {
                 return true;
             }

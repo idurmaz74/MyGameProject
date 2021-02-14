@@ -11,6 +11,6 @@ namespace GameProject.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string TcNo { get; set; }
-        public int BirtOfYear { get; set; }
+        public int BirthOfYear { get; set; }
     }
 }

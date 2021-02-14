@@ -10,16 +10,16 @@ namespace GameProject
     {
         static void Main(string[] args)
         {
-            Customer customer = new Customer { Id=1,FirstName="Kübra",LastName="Kılıç",TcNo="22222222222",BirtOfYear=1997};
+            Customer customer = new Customer { Id = 1, FirstName = "Bulut", LastName = "Çalışkan", TcNo = "12345678901", BirthOfYear = 2007 };
             ICustomerService customerService = new CustomerManager(new CustomerControlManagerAdapter());
             customerService.Add(customer);
 
-            Campaign campaignWinter = new Campaign() { Discount = 20 };
-            Campaign campaignBlackFriday = new Campaign() { Discount = 50 };
-            Game game = new Game() { Name = "Lara Croft Tomb Raider", Platform = "PC", Price = 400, Type = "Action" };
+            Campaign campaignWinter = new Campaign() { Discount = 25 };
+            Campaign campaignBlackFriday = new Campaign() { Discount = 55 };
+            Game game = new Game() { Name = "Halo 2", Platform = "PC", Price = 275, Type = "Action" };
 
-            IGameSaleService gameSaleService = new GameSaleManager(new GameSaleCampaignManager(campaignBlackFriday));
-            gameSaleService.Sale(customer,game);
+            IGameSaleService gameSaleService = new GameSaleManager(new GameSaleCampaignManager(campaignWinter));
+            gameSaleService.Sale(customer, game);
         }
     }
 }
